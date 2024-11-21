@@ -48,6 +48,34 @@ fun FormulirView(modifier: Modifier = Modifier,
         horizontalAlignment = Alignment.CenterHorizontally)
     {
 
+        TextField(
+            value = nama,
+            onValueChange = {nama = it},
+            label = {
+                Text(text = "Nama")
+            },
+            placeholder = {
+                Text(text = "isi nama anda") //Hint text
+            },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(5.dp)
+        )
+
+        TextField(
+            value = nim,
+            onValueChange = {nim = it},
+            label = {
+                Text(text = "Nim")
+            },
+            placeholder = {
+                Text(text = "isi Nim anda") //Hint text
+            },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(5.dp)
+        )
+
 
     }
 }
