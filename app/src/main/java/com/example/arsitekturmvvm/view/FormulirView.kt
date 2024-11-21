@@ -131,7 +131,11 @@ fun FormulirView(modifier: Modifier = Modifier,
                 .padding(5.dp),
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
         )
-
+        Button(onClick = {
+            onSubmitClicked(listData)
+        }) {
+            Text(text = "Simpan")
+        }
 
 
 
