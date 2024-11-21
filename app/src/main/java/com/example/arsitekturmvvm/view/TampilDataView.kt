@@ -40,5 +40,20 @@ fun TampilDataView(
 @Composable
 fun TampilData(
     param: String, argum: String
-){
+){Column(
+    modifier = Modifier.padding(16.dp))
+{
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.SpaceBetween)
+    {
+        Text(text = param,
+            modifier = Modifier.weight(0.8f)) // memberi ruang seberapa banyak dalam kolon/barisnya
+        Text(text = ":",
+            modifier = Modifier.weight(0.2f))
+        Text(text = argum, //kenapa argum? karena isinya akan digantikan dengan parameter argum
+            modifier = Modifier.weight(2f))
+
+    }
+}
 }
