@@ -76,6 +76,20 @@ fun FormulirView(modifier: Modifier = Modifier,
                 .padding(5.dp)
         )
 
+        Row (modifier = Modifier.fillMaxWidth()){
+            listJK.forEach{selectedGender ->
+                Row (
+                    verticalAlignment = Alignment.CenterVertically){
+                    RadioButton(
+                        selected = gender == selectedGender,
+                        onClick = { gender = selectedGender
+                        }
+                    )
+                    Text(text = selectedGender)
+
+                }}
+        }
+
 
     }
 }
